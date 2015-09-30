@@ -6,12 +6,11 @@
 module.exports = function(config) {
   'use strict';
 
-  var browsers = ['PhantomJS'];
-  // var browsers = ['PhantomJS', 'Firefox'];
+  var browsers = ['PhantomJS', 'Firefox'];
 
-  // if (!process.TRAVIS) {
-  //   browsers.push('Chrome');
-  // }
+  if (!process.TRAVIS) {
+    browsers.push('Chrome');
+  }
 
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
